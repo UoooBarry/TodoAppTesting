@@ -17,6 +17,7 @@ export default {
     props: ["item"],
     methods:{
         remove(){
+            this.$emit('removeItem', this.item);
             this.$axios.delete(`http://localhost:3000/api/items/${this.item._id}`)
                         .then(() => {
                             this.$emit('removeItem', this.item);
@@ -26,6 +27,7 @@ export default {
                         })
         },
         done(){
+            this.$emit('doneItem', this.item);
             this.$axios.patch(`http://localhost:3000/api/items/${this.item._id}`)
                         .then((res) => {
                             this.item.isDone = res.data.item.isDone;
