@@ -21,6 +21,10 @@ def run_frontend():
 if(len(sys.argv) <= 1):
     flag = True
     while flag:
+        print("/*****************************")
+        print("*     @AUTHOR UOOOBARRY     *")
+        print("* PYTHON CLI FOR TO DO APP. *")
+        print("*****************************/")
         print('Select an option you want to run: ')
         print('0. Install dependices ')
         print('1. Run backend ')
