@@ -51,7 +51,7 @@ router.post('/create', (req:Request, res:Response) => {
 router.patch('/:id', (req: Request, res: Response) => {
     Item.findById(req.params.id)
         .then((item: ItemType) => {
-            if(!item) throw 'Item not fond';
+            if(!item) throw 'Items not fond';
             item.isDone = !item.isDone;
             item.save();
             res.json({
