@@ -9,6 +9,10 @@ def install_deps():
     os.system("cd To-Do-App && npm install")
     print('Install dependices')
 
+def run_build():
+    subprocess.call("cd To-Do-App && start npm run build", shell=True)
+    print('Build the backend')
+
 def run_backend():
     subprocess.call("cd To-Do-App && start npm run start", shell=True)
     print('Run the backend server')
@@ -48,10 +52,13 @@ else:
             install_deps()
         elif(arg == '--help'):
             print('     --install: Install dependencies')
+            print('     --run: Build the app')
             print('     --run: Run the app')
         elif(arg == '--run'):
             run_backend()
             run_frontend()
+        elif(arg == '--build'):
+            run_build()
         else:
             print(arg)
             print('Unknown arguments, try run --help for help.')
