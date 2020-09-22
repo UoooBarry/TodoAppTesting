@@ -17,7 +17,7 @@ export default {
     props: ["item"],
     methods:{
         remove(){
-            this.$emit('removeItem', this.item);
+            // this.$emit('removeItem', this.item);
             this.$axios.delete(`http://localhost:3000/api/items/${this.item._id}`)
                         .then(() => {
                             this.$emit('removeItem', this.item);
