@@ -4,7 +4,7 @@
 Please make sure you have mongodb installed and running on default port 27017. <br>
 Please make sure you have install Node.js LTS version.<br>
 Please make sure you have python installed to use my custom CLI.<br>
-`python server.py --init --build` to build the latest server<br>
+`python server.py --install --build` to build the latest server<br>
 `python server.py --run` to run the backend and frontend.<br>
 
 ##Running the app
